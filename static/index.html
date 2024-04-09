@@ -1,16 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Форма выбора питомца</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<main>
-    <h1>Найди себе друга!</h1>
-
-    <!--Форму размещай тут-->
-
-</main>
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <title>Форма выбора питомца</title>
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <main>
+         <h1>Найди себе друга!</h1>
+         <!--Форму размещай тут-->
+         <form action="/pets/orders" method="POST">
+            <div class="form-part">
+               <label for="petType">Введите тип домашнего животного: </label>
+               <select title="petType" name="petType">
+                  <option value="cat">Кот</option>
+                  <option value="dog">Собака</option>
+                  <option value="tiger">Тигар</option>
+               </select>
+            </div>
+            <div class="form-part">
+               <label for="gender">Введите пол: </label>
+               <select title="gender" name="gender">
+                  <option value="boy">Пацан</option>
+                  <option value="boy">Чушпан</option>
+                  <option value="boy">Мехебехе яла сан</option>
+                  <option value="girl">Помазок</option>
+                  <option value="girl">Женщина</option>
+               </select>
+            </div>
+            <div class="form-part">
+               <label for="eyeColor">Введите желаемый цвет глаз: </label>
+               <input type="color" name="eyeColor" id="eyeColor" required />
+            </div>
+            <div class="form-part">
+               <label for="tailLength">Введите желаемую длину хвоста: </label>
+               <input type="number" name="tailLength" id="tailLength" min="7" max="120" required />
+            </div>
+            <div class="form-part">
+               <label for="name">Ваше имя: </label>
+               <input type="text" name="name" id="name" minlength="3" maxlength="50" required />
+            </div>
+            <div class="form-part">
+               <label for="dateOfBirth">Ваша дата рождения: </label>
+               <input type="date" name="dateOfBirth" id="dateOfBirth" required />
+            </div>
+            <div class="form-part">
+               <label for="email">Ваш email: </label>
+               <input type="email" name="email" id="email" required />
+            </div>
+            <div class="form-part">
+               <label for="phone">Ваш номер телефона: </label>
+               <input type="tel" name="phone" id="phone" required />
+            </div>
+            <div class="form-part">
+               <label for="rules">Я принимаю условия обработки и передачи данных</label>
+               <input type="checkbox" name="rules" id="rules" value="true" checked required />
+            </div>
+            <input type="submit" value="Отправить запрос">
+            <input type="reset" name="reset" value="Очистить форму">
+         </form>
+      </main>
+   </body>
 </html>
